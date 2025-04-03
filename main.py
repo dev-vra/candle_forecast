@@ -88,14 +88,9 @@ def main():
     prediction = analyzer.predict_next_candle(m1_data, m5_data)
     print(f"\nPrevisão para próxima vela M5: {prediction.upper()}")
     
-    # Plota os gráficos
-    print("\nPlotando gráficos...")
-    
-    # Gráfico M5
+    # Plota o gráfico M5
+    print("\nPlotando gráfico M5...")
     plot_chart_with_patterns(m5_data, m5_patterns, analyzer.repeated_patterns, "BTC/USDT - M5")
-    
-    # Gráfico M1 (últimos 25 candles)
-    plot_chart_with_patterns(m1_data.tail(25), [], [], "BTC/USDT - M1 (últimos 25 candles)")
     
     plt.show()
 

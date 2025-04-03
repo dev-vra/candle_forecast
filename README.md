@@ -1,52 +1,88 @@
-# Análise de Padrões de Candlesticks BTC/USD
+# Análise de Padrões de Candlesticks BTC/USDT
 
-Este sistema utiliza inteligência artificial para analisar padrões de candlesticks no mercado de BTC/USD, combinando dados dos timeframes M1 e M5 para fazer previsões da direção da próxima vela.
+Este projeto implementa um sistema de análise de padrões de candlesticks para o par BTC/USDT, utilizando dados em tempo real da Binance. O sistema identifica padrões como Hammer, Shooting Star e Doji, além de analisar padrões repetidos e fazer previsões para a próxima vela.
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
-- Coleta de dados históricos em tempo real da Binance
-- Identificação de padrões de candlesticks (Hammer, Shooting Star, Doji, Engulfing)
-- Análise combinada dos timeframes M1 e M5
-- Visualização gráfica dos padrões identificados
-- Previsão da direção da próxima vela
+- Coleta de dados em tempo real da Binance
+- Análise de padrões de candlesticks (M5)
+- Identificação de padrões repetidos
+- Previsão da próxima vela
+- Dashboard interativo em tempo real
+- Visualização de gráficos com padrões identificados
 
-## Requisitos
+## 📋 Pré-requisitos
 
 - Python 3.8 ou superior
-- Conexão com a internet
-- Bibliotecas listadas no requirements.txt
+- Conta na Binance (para acesso à API)
 
-## Instalação
+## 🔧 Instalação
 
-1. Clone este repositório
+1. Clone o repositório:
+```bash
+git clone https://github.com/dev-vra/candle_forecast.git
+cd candle_forecast
+```
+
 2. Instale as dependências:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Uso
+## 🎮 Como Usar
 
-Execute o script principal:
+### Dashboard Interativo
+
+Para iniciar o dashboard interativo:
+
+```bash
+streamlit run dashboard.py
+```
+
+O dashboard oferece:
+- Gráfico M5 em tempo real com padrões identificados
+- Configurações de atualização e número de candles
+- Lista de padrões encontrados
+- Previsão da próxima vela
+- Indicadores visuais para diferentes tipos de padrões
+
+### Script Principal
+
+Para executar a análise via linha de comando:
+
 ```bash
 python main.py
 ```
 
-O sistema irá:
+O script irá:
 1. Coletar dados históricos
 2. Analisar padrões
-3. Fazer previsão
+3. Fazer previsões
 4. Exibir gráficos com os padrões identificados
 
-## Padrões Identificados
+## 📊 Padrões Analisados
 
 - **Hammer**: Sinal de reversão de baixa
 - **Shooting Star**: Sinal de reversão de alta
 - **Doji**: Indecisão do mercado
-- **Engulfing Bullish**: Reversão de baixa
-- **Engulfing Bearish**: Reversão de alta
+- **Padrões Repetidos**: Identificação de sequências de padrões
 
-## Observações
+## 🔍 Estrutura do Projeto
 
-- O sistema utiliza dados em tempo real da Binance
-- A previsão é baseada em análise técnica e padrões históricos
-- Use o sistema como ferramenta auxiliar, não como única fonte de decisão 
+- `data_collector.py`: Coleta dados da Binance
+- `pattern_analyzer.py`: Análise de padrões e previsões
+- `main.py`: Script principal para análise
+- `dashboard.py`: Dashboard interativo em tempo real
+- `requirements.txt`: Dependências do projeto
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📞 Contato
+
+Para dúvidas ou sugestões, abra uma issue no repositório. 
